@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6797650853685613956}
   - component: {fileID: 7557723312017202566}
   - component: {fileID: 5235311068972704707}
+  - component: {fileID: 3368127556663413969}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -166,18 +167,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bf3f6a95bf441c965f3d3974caa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMotorTarget: 0
-  position: 0
-  targetPosition: 0
+  movingBody: {fileID: 7971740854870383648}
+  currentPosition: 0
   servoEnabled: 1
   MOTOR_FORCE: 100000
-  MOTOR_SPEED: 500
-  controlType: 1
-  threshold: 0.01
-  proportionalConstant: 1000
-  derivativeConstant: 100
-  integralConstant: 0
   servoAxis: 0
+--- !u!114 &3368127556663413969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464384999348777221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73363073bb2c04ef7beeed2fdfc56a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  proportionalConstant: 0
+  integralConstant: 0
+  derivativeConstant: 0
+  saturationThreshold: 0.05
 --- !u!1 &4520747114044255163
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +204,7 @@ GameObject:
   - component: {fileID: 5325338418095753528}
   - component: {fileID: 7676471838168961271}
   - component: {fileID: 2289340517306775610}
+  - component: {fileID: 8946297382103011184}
   m_Layer: 0
   m_Name: Leg
   m_TagString: Untagged
@@ -343,18 +355,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bf3f6a95bf441c965f3d3974caa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMotorTarget: 0
-  position: 0
-  targetPosition: 0
+  movingBody: {fileID: 1826005461019285011}
+  currentPosition: 0
   servoEnabled: 1
   MOTOR_FORCE: 100000
-  MOTOR_SPEED: 500
-  controlType: 1
-  threshold: 0.01
-  proportionalConstant: 1000
-  derivativeConstant: 100
-  integralConstant: 0
   servoAxis: 0
+--- !u!114 &8946297382103011184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520747114044255163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73363073bb2c04ef7beeed2fdfc56a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  proportionalConstant: 0
+  integralConstant: 0
+  derivativeConstant: 0
+  saturationThreshold: 0.05
 --- !u!1 &4981597450487456204
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +443,7 @@ GameObject:
   - component: {fileID: 5935872524723972194}
   - component: {fileID: 6874684915574464920}
   - component: {fileID: 3680810199641455880}
+  - component: {fileID: 4827027531736123179}
   m_Layer: 0
   m_Name: Hip
   m_TagString: Untagged
@@ -572,15 +595,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bf3f6a95bf441c965f3d3974caa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMotorTarget: 0
-  position: 0
-  targetPosition: 0
+  movingBody: {fileID: 7506810825516953454}
+  currentPosition: 0
   servoEnabled: 1
   MOTOR_FORCE: 100000
-  MOTOR_SPEED: 500
-  controlType: 1
-  threshold: 0.01
-  proportionalConstant: 1000
-  derivativeConstant: 100
-  integralConstant: 0
   servoAxis: 1
+--- !u!114 &4827027531736123179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117209709388132667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73363073bb2c04ef7beeed2fdfc56a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  proportionalConstant: 0
+  integralConstant: 0
+  derivativeConstant: 0
+  saturationThreshold: 0.05
