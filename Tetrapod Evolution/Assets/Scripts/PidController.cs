@@ -18,7 +18,12 @@ public class PidController : MonoBehaviour
     private float integralSum;
     private float lastError;
     private float prevControlSignal;
+
     public bool clampIntegral;
+
+    public float proportionalPath;
+    public float integralPath;
+    public float derivativePath;
 
 
     // Start is called before the first frame update
@@ -28,8 +33,6 @@ public class PidController : MonoBehaviour
         integralSum = 0.0f;
         lastError = 0.0f;
         prevControlSignal = 0.0f;
-        clampIntegral = false;
-
     }
 
     // Logic Loop
@@ -57,6 +60,10 @@ public class PidController : MonoBehaviour
         proportionalConstant = kp;
         integralConstant = ki;
         derivativeConstant = kd;
+    }
+
+    public void ClearIntegralSum() {
+        integralSum = 0;
     }
 
     // Calculation
@@ -99,19 +106,22 @@ public class PidController : MonoBehaviour
 
     float ProportionalPath(float error)
     {
-        return error * proportionalConstant;
+        float value = error * proportionalConstant;
+        proportionalPath = value;
+        return value;
     }
 
     float IntegralPath(float error)
     {
         integralSum += error;
-        return integralSum * integralConstant;
+        integralPath = integralSum * integralConstant;
+        return integralPath;
     }
 
     float DerivativePath(float error)
     {
-        float output = (error - lastError) * Time.deltaTime;
-        lastError = error;
+        float output = ((error - lastError) / Time.deltaTime) * derivativeConstant;
+        derivativePath = output;
         return output;
     }
 }

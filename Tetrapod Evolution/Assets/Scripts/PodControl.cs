@@ -40,4 +40,16 @@ public class PodControl : MonoBehaviour
         this.legPosition = legTarget;
     }
 
+    public void SetHipTarget(float hipTarget) {
+        this.hipPosition = hipTarget;
+    }
+
+    public void SetArmTarget(float armTarget) {
+        this.armPosition = armTarget;
+    }
+
+    public void SetLegTarget(float legTarget) {
+        this.legPosition = legTarget;
+    }
+
 }

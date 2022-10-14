@@ -167,10 +167,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bf3f6a95bf441c965f3d3974caa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingBody: {fileID: 7971740854870383648}
   currentPosition: 0
+  targetPosition: 0
   servoEnabled: 1
-  MOTOR_FORCE: 100000
+  controlScheme: 1
+  torqueApplied: 0
+  torqueCap: 500
   servoAxis: 0
 --- !u!114 &3368127556663413969
 MonoBehaviour:
@@ -185,10 +187,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  proportionalConstant: 0
+  proportionalConstant: 1000
   integralConstant: 0
   derivativeConstant: 0
   saturationThreshold: 0.05
+  clampIntegral: 0
+  proportionalPath: 0
+  integralPath: 0
+  derivativePath: 0
 --- !u!1 &4520747114044255163
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,10 +361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bf3f6a95bf441c965f3d3974caa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingBody: {fileID: 1826005461019285011}
   currentPosition: 0
+  targetPosition: 0
   servoEnabled: 1
-  MOTOR_FORCE: 100000
+  controlScheme: 1
+  torqueApplied: 0
+  torqueCap: 1000
   servoAxis: 0
 --- !u!114 &8946297382103011184
 MonoBehaviour:
@@ -373,10 +381,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  proportionalConstant: 0
+  proportionalConstant: 1000
   integralConstant: 0
   derivativeConstant: 0
   saturationThreshold: 0.05
+  clampIntegral: 0
+  proportionalPath: 0
+  integralPath: 0
+  derivativePath: 0
 --- !u!1 &4981597450487456204
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,10 +607,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bf3f6a95bf441c965f3d3974caa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingBody: {fileID: 7506810825516953454}
   currentPosition: 0
+  targetPosition: 0
   servoEnabled: 1
-  MOTOR_FORCE: 100000
+  controlScheme: 1
+  torqueApplied: 0
+  torqueCap: 500
   servoAxis: 1
 --- !u!114 &4827027531736123179
 MonoBehaviour:
@@ -613,7 +627,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  proportionalConstant: 0
+  proportionalConstant: 1000
   integralConstant: 0
   derivativeConstant: 0
   saturationThreshold: 0.05
+  clampIntegral: 0
+  proportionalPath: 0
+  integralPath: 0
+  derivativePath: 0
